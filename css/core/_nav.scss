@@ -8,28 +8,49 @@
         padding: 0;
 
         ul {
-            border-radius: 0.25em;
+            position: relative;
             padding: 0;
+            padding: 0.5em 0;
             left: 0;
             opacity: 0;
             position: absolute;
             top: -9999px;
             background: #fff;
+            background: linear-gradient(to right, #fff, lighten($color-grey-1, 10%));
+            border-top: 1px solid $color-2;
+            border-radius: 0 0 0.125em 0.125em;
             white-space: nowrap;
             min-width: 200px;
-            box-shadow: $box-shadow-2;
+            box-shadow: $box-shadow-3;
             text-align: left;
             transition: opacity 0.35s;
             overflow: hidden;
 
             a {
-                @include fs(13px);
-                padding: 10px;
+                position: relative;
+                @include fs(15px);
+                color: $color-3;
+                padding: 1em 2em;
                 margin: 0;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: linear-gradient(to right, rgba($color-1, 0.08), rgba($color-2, 0.07));
+                    opacity: 0;
+                    transition: opacity 240ms ease;
+                }
 
                 &:hover,
                 &:focus {
-                    background: $color-grey-2;
+
+                    &::after {
+                        opacity: 1;
+                    }
                 }
             }
         }
@@ -41,7 +62,11 @@
         align-items: center;
 
         > li {
-            margin: 0 0 0 32px;
+            margin: 0 0 0 3em;
+
+            > a {
+                padding: 1.5em 0;
+            }
         }
 
         li:last-child ul {
@@ -58,11 +83,15 @@
         &.open {
 
             > a {
-                color: $color-1;
+                color: $color-2;
+
+                i {
+                    transform: rotate(180deg);
+                }
             }
 
             ul {
-                top: calc(100% + 4px);
+                top: 100%;
                 opacity: 1;
                 z-index: 10;
             }
@@ -70,7 +99,8 @@
     }
 
     a {
-        @include fs(16px);
+        @include fs(18px);
+        font-weight: 600;
         display: block;
         color: $color-0;
         text-decoration: none;
@@ -82,9 +112,11 @@
         }
 
         i {
-            @include fs(12px);
+            @include fs(14px);
             cursor: pointer;
-            margin: 0 0 0 6px;
+            margin: 0 0 0 0.5em;
+            transform-origin: center;
+            transition: $transition-1;
         }
     }
 

@@ -1,6 +1,16 @@
 .blog {
     margin: 0 auto;
 
+    &.blog-widget {
+        background: linear-gradient(to left, rgba($color-0, 0.04), rgba($color-0, 0.02));
+        padding: 6em 0 5em;
+        max-width: 1600px;
+
+        .section-heading {
+            margin-bottom: 3em;
+        }
+    }
+
     &.blog-layout {
 
         .post {
@@ -44,22 +54,52 @@
 
     }
 
-    a {
-        text-decoration: none;
-        color: inherit;
-    }
-
     .post {
+        position: relative;
         width: calc(33.333% - 2em);
         margin: 1em;
-        border-radius: 0.25em;
-        overflow: hidden;
+        padding: 2em;
+        padding-top: 3em;
         background: #fff;
+        border-radius: 0.125em;
+        box-shadow: 0 0.625em 1.25em rgba(35, 45, 75, 0.15);
         transition: $transition-1;
+        z-index: 1;
+        overflow: hidden;
 
-        &:hover,
-        &:focus{
-            box-shadow: $box-shadow-2;
+        // &::before {
+        //     content: '';
+        //     position: absolute;
+        //     top: 0;
+        //     left: 2em;
+        //     right: 0;
+        //     height: 0.75em;
+        //     background: red;
+        // }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1em;
+            background: $color-grey-1;
+            background: linear-gradient(to right, rgba($color-1, 0.5), rgba($color-2, 0.5));
+            z-index: -1;
+            opacity: 0.25;
+            transition: 250ms ease;
+        }
+
+        &:hover {
+            &::after {
+                opacity: 0.75;
+            }
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
         }
     }
 
@@ -78,18 +118,46 @@
         display: none;
     }
 
-    .info {
-        padding: 1em;
+    .tags {
+        text-transform: uppercase;
+        font-size: 0.875rem;
+        letter-spacing: 0.08em;
+
+        a {
+            color: $color-3;
+        }
     }
 
     .title {
-        @include fs(24px);
-        margin: 0;
+        margin-top: 1em;
+
+        a {
+            transition: $transition-1;
+
+            &:hover {
+                color: $color-2;
+            }
+        }
     }
 
     .summary {
-        @include fs(16px);
+        @include fs(18px);
         padding-top: 1em;
+    }
+
+    .arrow {
+        text-align: right;
+        font-size: 1rem;
+        margin-top: 2em;
+        color: $color-2;
+
+        i {
+            margin-left: 0.5em;
+        }
+    }
+
+    .buttons {
+        margin-top: 3em;
     }
 
     @media (max-width: 768px) {

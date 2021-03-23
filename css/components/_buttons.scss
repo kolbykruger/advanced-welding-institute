@@ -1,5 +1,5 @@
 $button-color: #fff;
-$button-background: $color-1;
+$button-background: $color-0;
 
 /* Button Styling */
 .buttons {
@@ -40,10 +40,11 @@ $button-background: $color-1;
     display: inline-flex;
     align-items: center;
     margin: 0;
-    padding: 0.75em 1em;
+    padding: 1.1em 1.5em;
     background: $button-background;
     color: $button-color;
-    border-radius: 0.25em;
+    border-radius: 0.75em;
+    font-weight: 500;
     line-height: 1;
     transition: 150ms ease;
     text-decoration: none;
@@ -74,6 +75,24 @@ $button-background: $color-1;
         margin-left: 1.5em;
     }
 
+    &-secondary {
+        background: $color-1;
+
+        &:hover,
+        &:focus {
+            background: lighten($color-1, 10%);
+        }
+    }
+
+    &-tertiary {
+        background: $color-2;
+
+        &:hover,
+        &:focus {
+            background: lighten($color-2, 10%);
+        }
+    }
+
     // Unique styles
     &-reverse {
         background: #fff;
@@ -96,8 +115,41 @@ $button-background: $color-1;
             color: $color-2;
             border-color: $color-2
         }
+
+        &-secondary {
+            color: $color-3;
+            border: 1px solid lighten($color-3, 50%);
+
+        }
     }
-    
+
+    &-transparent {
+        background: transparent;
+        color: $color-3;
+        letter-spacing: .03em;
+        font-weight: 400;
+
+        &:hover,
+        &:focus {
+            background: $color-grey-1;
+            box-shadow: none;
+        }
+    }
+
+    &-text {
+        background: none;
+        color: lighten($color-1, 15%);
+    }
+
+    &-size-medium {
+        font-size: 1rem;
+    }
+
+    &-size-small {
+        font-size: 0.875rem;
+        padding: 0.875em 1em;
+    }
+
     &[disabled] {
         background: $color-grey-1;
         color: $color-0;

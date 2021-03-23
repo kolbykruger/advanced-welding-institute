@@ -1,14 +1,14 @@
 .footer {
     width: 100%;
-    background: $color-grey-2;
-    margin: 1em 0 0;
+    margin: 2em 0 0;
 
     .container {
 
     }
 
-    .group {
-        margin-top: 3em;
+    .footer-group {
+        border-top: 1px solid rgba($color-1, 0.15);
+        padding: 6em 0;
     }
 
     &-logo {
@@ -65,7 +65,11 @@
         width: 100%;
         margin-top: 3em;
         padding-top: 2em;
-        border-top: 1px solid #ddd;
+        border-top: 1px solid rgba($color-1, 0.15);
+    }
+
+    .footer-copyright {
+        padding: 3em 0 2em;
     }
 
     .ewd {
