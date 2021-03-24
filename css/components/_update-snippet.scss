@@ -1,0 +1,25 @@
+.update-snippet {
+    background: $color-0;
+    background: linear-gradient(to bottom right, $color-1, $color-0);
+    padding: 3em;
+    max-width: $container-width;
+    border-radius: 0.125em;
+
+    .container {
+        max-width: $container-width-sm;
+        color: #fff;
+    }
+
+    .group {
+        justify-content: space-between;
+        align-items: flex-end;
+
+        p {
+            color: lighten($color-3, 25%);
+        }
+    }
+
+    .buttons {
+        width: auto;
+    }
+}

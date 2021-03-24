@@ -2,15 +2,14 @@
     position: relative;
     background: $color-0;
     background: linear-gradient(to bottom right, $color-1, $color-0);
-    padding: 6em 0 5em;
-    max-width: 1600px;
+    padding: 3em 0 5em;
+    max-width: $container-width;
     min-height: 60vh;
-    margin: 0 auto;
+    margin: 8vh auto;
     border-radius: 0.125em;
-    color: #fff;
 
     .container {
-
+        max-width: $container-width-sm;
     }
 
     .section-heading {
@@ -18,6 +17,7 @@
         max-width: 768px;
 
         h2 {
+            color: #fff;
             margin-bottom: 0.75em;
         }
 
@@ -39,7 +39,9 @@
         overflow: hidden;
 
         a {
-            display: block;
+            display: flex;
+            flex-flow: column nowrap;
+            height: 100%;
             text-decoration: none;
 
             img {
@@ -47,8 +49,6 @@
             }
 
             &:hover {
-
-
                 img {
                     transform: scale(1.04);
                 }
@@ -60,11 +60,23 @@
         }
 
         .details {
-
+            flex: 1;
+            position: relative;
+            box-shadow: $box-shadow-3;
         }
 
         .text {
             padding: 2em;
+
+            .tags {
+                text-transform: uppercase;
+                font-size: 0.875rem;
+                letter-spacing: 0.08em;
+
+                a {
+                    color: $color-3;
+                }
+            }
 
             .desc > * {
                 font-size: 1rem;
@@ -87,5 +99,4 @@
             }
         }
     }
-
 }

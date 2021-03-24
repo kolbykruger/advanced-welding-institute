@@ -1,0 +1,145 @@
+.courses {
+    padding: 6em 0 3em;
+    background: $color-grey-1;
+    max-width: $container-width;
+    width: 100%;
+    margin: 8vh auto;
+
+    .section-heading {
+        margin-bottom: 3em;
+        max-width: 768px;
+
+        h2 {
+            margin-bottom: 0.75em;
+        }
+
+        p {
+            color: lighten($color-3, 25%);
+        }
+    }
+
+    .container {
+        max-width: $container-width-sm;
+    }
+
+    .flickity-slider {
+        position: relative;
+        margin: 0 auto;
+        margin-left: 2em;
+    }
+
+    .flickity-viewport {
+        position: relative;
+        width: 100%;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 12%;
+            background: linear-gradient(to right, transparent, $color-grey-1);
+        }
+    }
+
+    .flickity-prev-next-button {
+        &.previous {
+            right: calc(100% + 1.5em);
+            left: auto;
+        }
+
+        &.next {
+            left: calc(100% + 1.5em);
+            right: auto;
+        }
+
+        &[disabled] {
+            opacity: 0;
+        }
+    }
+
+    .group {
+        margin: 3em -2em;
+    }
+
+    &-item {
+        width: calc(45% - 4em);
+        margin: 2em 2em;
+        padding: 3em;
+        min-height: 450px;
+        background: #fff;
+        box-shadow: 0 0.625em 1.25em rgba(35, 45, 75, 0.15);
+        //margin-right: 6em;
+        //opacity: 0.5;
+        transition: opacity 0.4s ease;
+        user-select: none;
+
+        a {
+            text-decoration: none;
+        }
+
+        // &.is-selected {
+        //     opacity: 1;
+        // }
+
+        .tags {
+            text-transform: uppercase;
+            font-size: 0.875rem;
+            letter-spacing: 0.08em;
+            color: $color-3;
+        }
+
+        h3 {
+            margin-top: 0.8em;
+        }
+
+        .description {
+            margin-top: 1.5em;
+            margin-bottom: 1.5em;
+
+            > * {
+                font-size: 1rem;
+            }
+        }
+
+        .arrow {
+            margin-top: 2.5em;
+            text-align: right;
+            color: $color-2;
+
+            i {
+                margin-left: 0.5em;
+            }
+        }
+
+        .details {
+            display: flex;
+            flex-flow: row wrap;
+            align-items: flex-start;
+            margin: 0 -0.5em;
+
+            &-item {
+                flex: 1;
+                margin: 0.5em;
+                max-width: 150px;
+
+                p {
+                    font-size: 1rem;
+                    margin-bottom: 0;
+                }
+
+                .label {
+                    border-bottom: 1px solid lighten($color-3, 45%);
+                    margin-bottom: 0.5em;
+                    padding-bottom: 0.5em;
+                    font-weight: 500;
+                }
+
+                .value {
+                    //font-size: 1rem;
+                }
+            }
+        }
+    }
+}

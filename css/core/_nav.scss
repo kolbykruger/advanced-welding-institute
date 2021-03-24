@@ -26,7 +26,7 @@
             transition: opacity 0.35s;
             overflow: hidden;
 
-            a {
+            a:not(.button) {
                 position: relative;
                 @include fs(15px);
                 color: $color-3;
@@ -40,14 +40,13 @@
                     left: 0;
                     width: 100%;
                     height: 100%;
-                    background: linear-gradient(to right, rgba($color-1, 0.08), rgba($color-2, 0.07));
+                    background: linear-gradient(to right, rgba($color-1, 0.09), rgba($color-2, 0.07));
                     opacity: 0;
                     transition: opacity 240ms ease;
                 }
 
                 &:hover,
                 &:focus {
-
                     &::after {
                         opacity: 1;
                     }
@@ -64,7 +63,7 @@
         > li {
             margin: 0 0 0 3em;
 
-            > a {
+            > a:not(.button) {
                 padding: 1.5em 0;
             }
         }
@@ -81,8 +80,7 @@
         display: block;
 
         &.open {
-
-            > a {
+            > a:not(.button) {
                 color: $color-2;
 
                 i {
@@ -98,7 +96,7 @@
         }
     }
 
-    a {
+    a:not(.button) {
         @include fs(18px);
         font-weight: 600;
         display: block;

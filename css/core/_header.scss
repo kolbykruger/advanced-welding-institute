@@ -3,6 +3,10 @@
     padding-top: 0.85em;
     padding-bottom: 2em;
 
+    body#home & {
+        padding-bottom: 0;
+    }
+
     &::before {
         content: '';
         position: absolute;
@@ -19,17 +23,21 @@
         position: relative;
         max-width: $container-width;
         width: 100%;
-        padding: 2em 1em 0;
+        padding: 2em 0 0;
     }
 
     .group {
         justify-content: space-between;
         align-items: flex-end;
         border-bottom: 1px solid rgba($color-1, 0.15);
+
+        @media (max-width: 1650px) {
+            padding: 0 1em 0;
+        }
     }
 
     .logo {
-        width:100%;
+        width: 100%;
         max-width: 280px;
 
         a {
@@ -96,5 +104,4 @@
             height: 100%;
         }
     }
-
 }

@@ -1,0 +1,16 @@
+.videos {
+    margin: 4vh auto;
+
+    .container {
+        padding: 0;
+    }
+
+    .group {
+        margin: 0 -1em;
+    }
+
+    &-item {
+        width: calc(50% - 2em);
+        margin: 1em;
+    }
+}

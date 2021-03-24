@@ -2,9 +2,13 @@
     margin: 0 auto;
 
     &.blog-widget {
-        background: linear-gradient(to left, rgba($color-0, 0.04), rgba($color-0, 0.02));
+        background: linear-gradient(to bottom, rgba($color-0, 0.04), transparent);
         padding: 6em 0 5em;
         max-width: 1600px;
+
+        .container {
+            max-width: $container-width-sm;
+        }
 
         .section-heading {
             margin-bottom: 3em;
@@ -12,9 +16,7 @@
     }
 
     &.blog-layout {
-
         .post {
-
             &:first-of-type {
                 width: 100%;
                 display: flex;
@@ -42,16 +44,13 @@
     }
 
     .container {
-
         & > .group {
             margin: 0 -1em;
         }
-
     }
 
     .group {
-        justify-content:center;
-
+        justify-content: center;
     }
 
     .post {
@@ -111,7 +110,6 @@
             width: 100%;
             transition: $transition-1;
         }
-
     }
 
     .caption {
@@ -161,22 +159,18 @@
     }
 
     @media (max-width: 768px) {
-
         .post {
             width: calc(100% - 2em) !important;
         }
 
         &.blog-layout {
-
             .post:first-of-type {
                 display: block;
 
                 & > * {
                     width: 100%;
                 }
-
             }
         }
     }
-
 }
