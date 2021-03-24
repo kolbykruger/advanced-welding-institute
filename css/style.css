@@ -1561,7 +1561,7 @@ body.menu-open .mobile_nav {
 }
 
 .instagram {
-  padding: 6em 0 5em;
+  padding: 2em 0;
 }
 .instagram .container {
   max-width: 1600px;
@@ -2531,7 +2531,7 @@ table td {
   padding: 3em 0 5em;
   max-width: 100em;
   min-height: 60vh;
-  margin: 8vh auto;
+  margin: 0 auto;
   border-radius: 0.125em;
 }
 .stories .container {
@@ -2616,7 +2616,7 @@ table td {
   background: #f8f8fc;
   max-width: 100em;
   width: 100%;
-  margin: 8vh auto;
+  margin: 0 auto;
 }
 .courses .section-heading {
   margin-bottom: 3em;
