@@ -2793,6 +2793,11 @@ table td {
 .videos .group {
   margin: 0 -1em;
 }
+@media (max-width: 1650px) {
+  .videos .group {
+    margin: 0;
+  }
+}
 .videos-item {
   width: calc(50% - 2em);
   margin: 1em;
