@@ -1290,6 +1290,9 @@ body.menu-open .mobile_nav {
 .footer .footer-copyright {
   padding: 3em 0 2em;
 }
+.footer .social-icons {
+  margin-top: 1em;
+}
 .footer .ewd {
   width: 200px;
 }
@@ -1551,7 +1554,9 @@ body.menu-open .mobile_nav {
   height: 2em;
   padding: 0.25em;
   margin: 0.25em;
-  color: #3a4061;
+  color: #4a5d86;
+  background: rgba(74, 93, 134, 0.15);
+  border-radius: 50%;
   transition: 150ms ease;
   text-decoration: none;
 }

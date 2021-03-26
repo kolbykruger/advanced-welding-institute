@@ -3,11 +3,11 @@
     align-items: center;
     justify-content: center;
     font-size: 1.5rem;
-    
+
     &:hover a,
     &:focus-within a {
         opacity: 0.5;
-    }  
+    }
 
     a {
         display: flex;
@@ -17,7 +17,10 @@
         height: 2em;
         padding: 0.25em;
         margin: 0.25em;
-        color: $color-1;
+        color: $color-3;
+        background: rgba($color-3, 0.15);
+        border-radius: 50%;
+        //box-shadow: 0 0.625em 1.25em rgba(35, 45, 75, 0.15);
         transition: 150ms ease;
         text-decoration: none;
 
