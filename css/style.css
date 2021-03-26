@@ -2489,8 +2489,9 @@ table td {
   color: #e5a501;
   margin-bottom: 3em;
   text-transform: uppercase;
-  font-size: 1rem;
+  font-size: 1.25rem;
   letter-spacing: 0.08em;
+  font-weight: 500;
 }
 .impression p::after {
   content: "";
@@ -2524,10 +2525,13 @@ table td {
     font-size: 4.25rem;
   }
 }
+.impression .buttons {
+  margin-top: 1em;
+}
 .stories {
   position: relative;
   background: #11152c;
-  background: linear-gradient(to bottom right, #3a4061, #11152c);
+  background: linear-gradient(to bottom right, #49517b, #3a4061);
   padding: 3em 0 5em;
   max-width: 100em;
   min-height: 60vh;
@@ -2546,7 +2550,7 @@ table td {
   margin-bottom: 0.75em;
 }
 .stories .section-heading p {
-  color: #8f9fc1;
+  color: #c0c9dc;
 }
 .stories .group {
   margin: 0 -1em;
@@ -2785,13 +2789,18 @@ table td {
 }
 
 .videos {
-  margin: 4vh auto;
+  margin: 8vh auto;
 }
 .videos .container {
   padding: 0;
 }
+.videos .section-heading {
+  text-align: center;
+  margin-bottom: 1em;
+}
 .videos .group {
   margin: 0 -1em;
+  justify-content: center;
 }
 @media (max-width: 1650px) {
   .videos .group {
@@ -2799,13 +2808,42 @@ table td {
   }
 }
 .videos-item {
-  width: calc(50% - 2em);
+  position: relative;
+  width: calc(60% - 2em);
   margin: 1em;
+}
+.videos-item::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 150%;
+  height: 150%;
+  background: green;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  background: linear-gradient(90deg, #fff 21px, transparent 1%) center, linear-gradient(#fff 21px, transparent 1%) center, #3a4061;
+  background-size: 23px 23px;
+}
+.videos-item::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 152%;
+  height: 152%;
+  background: green;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  background: linear-gradient(to right, #fff, transparent, #fff), linear-gradient(to bottom, #fff, transparent, #fff);
+}
+.videos-item .responsive-iframe {
+  box-shadow: 0 0.625em 1.25em rgba(35, 45, 75, 0.15);
 }
 
 .update-snippet {
   background: #11152c;
-  background: linear-gradient(to bottom right, #3a4061, #11152c);
+  background: linear-gradient(to bottom right, #49517b, #3a4061);
   padding: 3em;
   max-width: 100em;
   border-radius: 0.125em;
@@ -2819,7 +2857,7 @@ table td {
   align-items: flex-end;
 }
 .update-snippet .group p {
-  color: #8f9fc1;
+  color: #c0c9dc;
 }
 .update-snippet .buttons {
   width: auto;
